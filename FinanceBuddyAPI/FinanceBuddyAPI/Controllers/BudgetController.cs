@@ -15,7 +15,7 @@ namespace FinanceBuddy
         private static readonly List<ITransaction> MockItems =
         [
             new Transaction{Id=1, Name="Rent", Amount=1200, TransactionDate=DateTime.Now.AddMonths(-1)},
-            new Transaction{Id=1, Name="Groceries", Amount=200, TransactionDate=DateTime.Now.AddMonths(-1)}
+            new Transaction{Id=2, Name="Groceries", Amount=200, TransactionDate=DateTime.Now.AddMonths(-1)}
         ];
 
         #endregion

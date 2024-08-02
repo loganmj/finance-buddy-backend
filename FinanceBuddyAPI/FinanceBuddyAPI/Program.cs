@@ -14,6 +14,10 @@ builder.Services.AddCors(options =>
             .AllowAnyHeader());
 });
 
+// Add authorization and controllers services
+builder.Services.AddAuthorization();
+builder.Services.AddControllers();
+
 // Build the app container
 var app = builder.Build();
 
