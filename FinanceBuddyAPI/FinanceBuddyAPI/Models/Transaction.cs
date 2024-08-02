@@ -11,7 +11,7 @@
         public int Id { get; set; }
 
         /// <inheritdoc/>
-        public string Name { get; set; }
+        public string? Name { get; set; }
 
         /// <inheritdoc/>
         public decimal Amount { get; set; }

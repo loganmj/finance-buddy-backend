@@ -15,7 +15,7 @@ namespace FinanceBuddyAPI.Models
         /// <summary>
         /// An identier name of the transaction.
         /// </summary>
-        string Name { get; set; }
+        string? Name { get; set; }
 
         /// <summary>
         /// The amount that the transaction was for.
