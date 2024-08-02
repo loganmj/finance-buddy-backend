@@ -22,6 +22,21 @@ namespace FinanceBuddy
 
         #region Public Methods
 
+        [HttpPost]
+        public IActionResult Create([FromBody] Transaction newTransaction)
+        {
+            if (newTransaction == null)
+            {
+                return BadRequest();
+            }
+
+            // Generate a new ID
+            newTransaction.Id = MockItems.Max(t => t.Id) + 1;
+            MockItems.Add(newTransaction);
+
+            return CreatedAtAction(nameof(Get), new { id = newTransaction.Id }, newTransaction);
+        }
+
         /// <summary>
         /// Gets all transaction data.
         /// </summary>
