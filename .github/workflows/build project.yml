@@ -1,0 +1,22 @@
+name: Build API
+
+on: 
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up .NET Core
+      uses: actions/setup-dotnet@v2
+      with:
+        dotnet-version: '7.x' #Adjust the dotnet version as needed
+
+    - name: Build with dotnet
+      run: dotnet build --configuration Release
