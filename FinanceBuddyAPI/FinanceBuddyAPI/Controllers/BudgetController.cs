@@ -1,5 +1,5 @@
-using Microsoft.AspNetCore.Mvc;
 using FinanceBuddyAPI.Models;
+using Microsoft.AspNetCore.Mvc;
 
 namespace FinanceBuddy
 {
@@ -56,7 +56,7 @@ namespace FinanceBuddy
         public ActionResult<ITransaction> Get(int id)
         {
             var item = MockItems.FirstOrDefault(x => x.Id == id);
-            if (item == null) 
+            if (item == null)
             {
                 return NotFound();
             }
@@ -70,7 +70,7 @@ namespace FinanceBuddy
         /// <param name="item"></param>
         /// <returns></returns>
         [HttpPut("{id}")]
-        public IActionResult Put(int id, ITransaction item) 
+        public IActionResult Put(int id, ITransaction item)
         {
             var existingItem = MockItems.FirstOrDefault(x => x.Id == id);
             if (existingItem == null)
@@ -90,11 +90,11 @@ namespace FinanceBuddy
         /// <param name="id"></param>
         /// <returns></returns>
         [HttpDelete("{id}")]
-        public IActionResult Delete(int id) 
+        public IActionResult Delete(int id)
         {
-            var item = MockItems.FirstOrDefault(x => x.Id==id);
+            var item = MockItems.FirstOrDefault(x => x.Id == id);
 
-            if (item == null) 
+            if (item == null)
             {
                 return NotFound();
             }
